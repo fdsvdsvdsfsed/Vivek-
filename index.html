@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+</head>
+<body>
+    <div>
+        <p>Input 1: <input type="text" id="input1" > </p> 
+        <p>Input 2: <input type="text" id="input2" > </p>  
+        <p>
+            Operator: 
+            <button class="btn" onclick="add()">+</button> 
+            <button class="btn" onclick="sub()">-</button> 
+            <button class="btn" onclick="multiply()">*</button> 
+            <button class="btn" onclick="divide()">/</button>
+         </p> 
+        <p>Result:</p> <p id="res"></p>
+        <script>
+            function add(){
+                var x=parseFloat(document.getElementById("input1").value);
+                var y=parseFloat(document.getElementById("input2").value);
+                var z=x+y;
+                document.getElementById("res").innerHTML=x+"+"+y+"="+z;
+            }
+            function sub(){
+               var x=parseFloat(document.getElementById("input1").value);
+               var y=parseFloat(document.getElementById("input2").value);
+               var p=x-y;
+               document.getElementById("res").innerHTML=x+"-"+y+"="+p;
+            }
+            function multiply(){
+               var x=parseFloat(document.getElementById("input1").value);
+               var y=parseFloat(document.getElementById("input2").value);
+               var q=x*y;
+               document.getElementById("res").innerHTML=x+"*"+y+"="+q;
+            }
+            function divide(){
+               var x=parseFloat(document.getElementById("input1").value);
+               var y=parseFloat(document.getElementById("input2").value);
+               var r=x/y;
+             document.getElementById("res").innerHTML=x+"/"+y+"="+r;
+            }
+        </script>
+        <style>
+            .btn{
+                padding: 10px;
+                background-color: rgb(38, 66, 124);
+                border: 0px;
+                color: black;
+            }
+            .btn:hover{
+                padding: 10px;
+                border: 0px;
+                background-color: rgb(37, 149, 44);
+                color: rgb(213, 66, 66);
+            }
+        </style>
+    </div>
+</body>
+</html>
